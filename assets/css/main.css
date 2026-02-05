@@ -3950,3 +3950,32 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+		/* Logo Cepheuz */
+.cepheuz-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px; /* abaixa o conjunto */
+}
+
+.cepheuz-logo img {
+  height: 42px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-text .brand {
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+}
+
+.logo-text .sub {
+  font-size: 0.75em;
+  letter-spacing: 0.35em;
+  opacity: 0.75;
+}
