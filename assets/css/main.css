@@ -3950,30 +3950,3 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
-		
-		#header .brand-logo {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  color: inherit;
-}
-
-#header .brand-logo img {
-  height: 38px;
-}
-
-#header .brand-text {
-  font-weight: 600;
-  letter-spacing: 0.25em;
-  white-space: nowrap;
-}
-
-#header .brand-text .sub {
-  font-weight: 300;
-  margin-left: 8px;
-  opacity: 0.8;
-}
-
-
-
