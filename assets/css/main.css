@@ -3950,28 +3950,30 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
-		/* ===== Logo Cepheuz ===== */
-.brand-logo {
+		
+		#header .brand-logo {
   display: flex;
   align-items: center;
   gap: 14px;
+  text-decoration: none;
+  color: inherit;
 }
 
-.brand-logo img {
-  height: 38px;        /* controla o tamanho do logo */
-  width: auto;
+#header .brand-logo img {
+  height: 38px;
 }
 
-.brand-text {
+#header .brand-text {
   font-weight: 600;
   letter-spacing: 0.25em;
-  white-space: nowrap; /* impede quebra de linha */
+  white-space: nowrap;
 }
 
-.brand-text .sub {
+#header .brand-text .sub {
   font-weight: 300;
   margin-left: 8px;
   opacity: 0.8;
 }
+
 
 
