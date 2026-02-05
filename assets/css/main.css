@@ -3959,29 +3959,28 @@ input, select, textarea {
   margin-top: 12px;
 }
 
-/* força o tamanho REAL do logo */
-#header .brand-logo img {
-  height: 34px;             /* 🔑 controle real */
-  width: auto;
-  margin: 0;
-  padding: 0;
+#header .brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-/* texto principal */
+#header .brand-logo img {
+  height: 34px;
+  width: auto;
+}
+
 #header .brand {
   display: flex;
   align-items: center;
   font-size: 1.05em;
   font-weight: 600;
   letter-spacing: 0.28em;
-  color: #ffffff;
-  line-height: 1;
 }
 
-/* CONTABILIDADE mais leve e separado */
 #header .brand .sub {
   margin-left: 10px;
   font-weight: 400;
-  opacity: 0.75;
-  letter-spacing: 0.32em;
+  opacity: 0.7;
 }
+
