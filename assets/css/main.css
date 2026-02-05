@@ -3950,30 +3950,38 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
-		/* Logo Cepheuz - linha única */
+		/* ===== Logo Cepheuz alinhado ao texto ===== */
+
 #header .brand-logo {
   display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-top: 16px;
-  text-decoration: none;
+  align-items: center;      /* alinhamento vertical perfeito */
+  gap: 12px;
+  margin-top: 12px;
 }
 
+/* força o tamanho REAL do logo */
 #header .brand-logo img {
-  height: 46px;
-  margin-top: 6px; /* abaixa o logo */
+  height: 34px;             /* 🔑 controle real */
+  width: auto;
+  margin: 0;
+  padding: 0;
 }
 
+/* texto principal */
 #header .brand {
-  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  font-size: 1.05em;
   font-weight: 600;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.28em;
   color: #ffffff;
+  line-height: 1;
 }
 
+/* CONTABILIDADE mais leve e separado */
 #header .brand .sub {
+  margin-left: 10px;
   font-weight: 400;
-  letter-spacing: 0.35em;
-  margin-left: 12px; /* separa CEPHEUZ de CONTABILIDADE */
   opacity: 0.75;
+  letter-spacing: 0.32em;
 }
