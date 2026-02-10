@@ -3144,8 +3144,8 @@ input, select, textarea {
 				-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 				-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 				transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-				background-color: #faf6f6;
-				color: #242943;
+				background-color: #060202;
+				color: #f7f8fb;
 				display: inline-block;
 				line-height: 1.65em;
 				margin-right: 0.325em;
