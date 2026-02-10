@@ -167,12 +167,9 @@ input, select, textarea {
 			color: #53e3fb !important;
 		}
 
-	#header .logo strong,
-.logo strong {
-  background: transparent !important;
-  color: inherit;
-  padding: 0;
-}
+	strong, b {
+		color: #ffffff;
+		font-weight: 600;
 	}
 
 	em, i {
