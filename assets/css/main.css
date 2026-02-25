@@ -94,3 +94,21 @@ nav a:hover {
   background: #0d0f14;
   font-size: 0.9rem;
 }
+/* ===== Logo Cepheuz ===== */
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo img {
+  height: 32px;   /* controla tamanho do logo */
+  width: auto;
+}
+
+.brand-text {
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  font-size: 0.9rem;
+}
