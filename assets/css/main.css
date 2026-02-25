@@ -1,4 +1,10 @@
-@import url(https://fonts.google.com/specimen/Montserrat?categoryFilters=Sans+Serif:%2FSans%2FGeometric);
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 
 * {
   margin: 0;
