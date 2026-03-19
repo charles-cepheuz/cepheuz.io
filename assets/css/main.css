@@ -3370,7 +3370,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #deded7;
+		background-color: #5e42a6;
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3380,7 +3380,7 @@ input, select, textarea {
 			color: #ffffff;
 			display: block;
 			font-size: 1.25em;
-			font-weight: bold;
+			font-weight: medium;
 		}
 
 		#header > nav {
