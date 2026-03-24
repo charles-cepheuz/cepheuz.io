@@ -132,10 +132,12 @@ body {
 }
 
 /* CARD DIREITO */
+
 .right-card {
   position: absolute;
-  bottom: 30px;
+  bottom: 80px;
   right: 100px;
+  max-width: 90%;
 }
 
 .right-card h3 {
