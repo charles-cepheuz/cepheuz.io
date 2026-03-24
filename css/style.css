@@ -67,29 +67,37 @@ body {
 
 /* LEFT */
 .left {
-  width: 52%;
+  width: 60%;
   padding: 140px 80px;
 }
 
 .left h1 {
-  font-size: 64px;
+  font-size: 58px;
   font-weight: 600;
   line-height: 1.1;
   margin-bottom: 60px;
 }
 
-.left p {
+.texto-hero {
   margin-top: -35px;
-  font-size: 20px;
-  line-height: 1.2;
-  max-width: 690px;
+
+  line-height: 1.4;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;   /* força 3 linhas */
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+
+  font-size: clamp(14px, 1.5vw, 20px); /* ajusta automático */
+  max-width: 650px;
 }
 
 /* CARD */
 .card {
   width: 100%;
   max-width: 640px;
-  padding: 18px;
+  padding: 12px;
   background: #1de9fa;
   border: 1px solid rgba(255,255,255,0.04);
 }
@@ -127,7 +135,7 @@ body {
 
 /* RIGHT */
 .right {
-  width: 48%;
+  width: 42%;
   position: relative;
 }
 
@@ -136,9 +144,9 @@ body {
 .right-card {
   position: absolute;
   bottom: 80px;
-  right: 80px;
-  width: 520px;
-  max-width: 80%;
+  right: 130px;
+  width: 560px;
+  max-width: 90%;
 }
 
 .right-card h3 {
