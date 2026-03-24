@@ -128,9 +128,7 @@ body {
 /* RIGHT */
 .right {
   width: 48%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  position: relative;
 }
 
 /* CARD DIREITO */
@@ -138,7 +136,7 @@ body {
 .right-card {
   position: absolute;
   bottom: 80px;
-  right: 5%;
+  right: 40px;
 }
 
 .right-card h3 {
