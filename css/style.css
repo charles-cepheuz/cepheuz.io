@@ -8,9 +8,10 @@
 
 body {
   background: #0a0f14;
-  font-family: 'Inter', sans-serif;
-  color: #d8d0c2;
+  font-family: 'Montserrat', sans-serif;
+  color: #e9fef9;
 }
+
 
 /* FRAME CENTRAL (IGUAL AO ORIGINAL) */
 .frame {
@@ -21,7 +22,7 @@ body {
   overflow: hidden;
 
   background: linear-gradient(90deg, #0b1117 52%, #1f2a35 48%);
-  box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+  box-shadow: 0 40px 100px #1de9fa;
 
   position: relative;
 }
@@ -39,15 +40,15 @@ body {
 }
 
 .logo {
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 3px;
-  color: #ff5a1f;
+  color: #1de9fa;
 }
 
 /* MENU */
 .menu {
-  width: 18px;
-  height: 12px;
+  width: 20px;
+  height: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -55,7 +56,7 @@ body {
 
 .menu span {
   height: 1px;
-  background: #e6dccb;
+  background: #1de9fa;
 }
 
 /* HERO */
@@ -77,12 +78,19 @@ body {
   margin-bottom: 60px;
 }
 
+.left p {
+  margin-top: -35px;
+  font-size: 20px;
+  line-height: 1.2;
+  max-width: 690px;
+}
+
 /* CARD */
 .card {
-  width: 240px;
+  width: 640px;
   padding: 18px;
 
-  background: rgba(255,255,255,0.02);
+  background: #1de9fa;
   border: 1px solid rgba(255,255,255,0.04);
 }
 
@@ -92,18 +100,18 @@ body {
 }
 
 .card p {
-  font-size: 11px;
-  color: #8c8c8c;
+  font-size: 13px;
+  color: #111111;
   line-height: 1.6;
 }
 
 .card span {
-  color: #ff5a1f;
+  color: #231f20;
 }
 
 /* POSIÇÕES */
 .left-card {
-  margin-top: 20px;
+  margin-top: -20px;
 }
 
 /* BOTÃO */
@@ -112,8 +120,8 @@ body {
   padding: 10px 26px;
   font-size: 11px;
   border: none;
-  background: #ff5a1f;
-  color: white;
+  background: #1de9fa;
+  color: #231f20;
   cursor: pointer;
 }
 
@@ -126,16 +134,15 @@ body {
 /* CARD DIREITO */
 .right-card {
   position: absolute;
-  bottom: 80px;
+  bottom: 30px;
   right: 100px;
 }
 
-/* SETA */
-.arrow {
-  position: absolute;
-  right: 60px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
-  opacity: 0.6;
+.right-card h3 {
+  color: #111111;
 }
+
+.menu {
+  display: none;
+}
+
