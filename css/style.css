@@ -87,9 +87,9 @@ body {
 
 /* CARD */
 .card {
-  width: 640px;
+  width: 100%;
+  max-width: 640px;
   padding: 18px;
-
   background: #1de9fa;
   border: 1px solid rgba(255,255,255,0.04);
 }
@@ -139,8 +139,6 @@ body {
   position: absolute;
   bottom: 80px;
   right: 5%;
-  width: 640px;
-  max-width: 90%;
 }
 
 .right-card h3 {
