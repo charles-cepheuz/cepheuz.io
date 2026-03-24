@@ -136,7 +136,9 @@ body {
 .right-card {
   position: absolute;
   bottom: 80px;
-  right: 40px;
+  right: 60px;
+  width: 480px;
+  max-width: 85%;
 }
 
 .right-card h3 {
