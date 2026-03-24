@@ -156,26 +156,7 @@ body {
 /* ===== RESPONSIVO LIMPO ===== */
 
 /* NOTEBOOK */
-@media (max-width: 1200px) {
 
-  .left {
-    padding: 100px 60px;
-  }
-
-  .left h1 {
-    font-size: 52px;
-  }
-
-  .left p {
-    font-size: 14px;
-    max-width: 400px;
-  }
-
-  .right-card {
-    right: 60px;
-    bottom: 60px;
-  }
-}
 
 
 /* TABLET */
