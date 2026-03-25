@@ -21,7 +21,7 @@ body {
   border-radius: 20px;
   overflow: hidden;
 
-  background: linear-gradient(90deg, #0b1117 52%, #1f2a35 48%);
+  background: linear-gradient(90deg, #0b1117 50%, #1f2a35 50%);
   box-shadow: 0 40px 100px #1de9fa;
 
   position: relative;
@@ -66,6 +66,8 @@ body {
 }
 
 /* LEFT */
+
+
 .left {
   width: 60%;
   padding: 140px 80px;
@@ -103,15 +105,19 @@ body {
 }
 
 .card h3 {
-  font-size: 13px;
+  font-size: 12px;
   margin-bottom: 10px;
 }
 
 .card p {
-  font-size: 13px;
+  font-size: 11px;
   color: #111111;
-  line-height: 1.6;
+  line-height: 1.4;
+  word-wrap: break-word; /* Força a quebra de palavras se necessário */
+  overflow-wrap: break-word;
 }
+
+
 
 .card span {
   color: #231f20;
@@ -134,20 +140,29 @@ body {
 }
 
 /* RIGHT */
+
 .right {
   width: 42%;
   position: relative;
+  display: flex;           /* Ativa o modo flex */
+  align-items: flex-end;   /* Alinha o card na parte de baixo */
+  justify-content: center; /* Centraliza o card horizontalmente dentro da área cinza */
+  padding-bottom: 80px;    /* Define a distância do fundo */
 }
+
 
 /* CARD DIREITO */
 
 .right-card {
-  position: absolute;
-  bottom: 80px;
-  right: 130px;
-  width: 560px;
-  max-width: 90%;
+  position: relative;      /* Mudamos de absolute para relative */
+  width: 90%;              /* Ocupa quase toda a largura da metade direita */
+  max-width: 500px;        /* Mas não passa de 500px para não ficar gigante */
+  padding: 20px;
+  background: #1de9fa;
+  border: 1px solid rgba(255,255,255,0.04);
 }
+
+
 
 .right-card h3 {
   color: #111111;
