@@ -153,7 +153,7 @@ body {
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   
-  /* ADICIONE ESTAS LINHAS ABAIXO */
+  
   width: auto;               /* Impede que o botão estique no mobile */
   align-self: flex-start;    /* Alinha o botão à esquerda dentro do contêiner Flex */
   max-width: 250px;          /* Define uma largura máxima para o botão não ficar muito grande */
@@ -197,16 +197,25 @@ body {
 
 .right-services {
   width: 55%;
-  padding: 80px;
+  height: 100%;            /* ESSENCIAL: define que o container ocupa toda a altura */
+  padding: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Duas colunas */
-  gap: 30px;
-  align-items: center;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+  align-content: center;   /* Centraliza o grupo de cards verticalmente */
+  justify-content: center; /* Centraliza o grupo de cards horizontalmente */
 }
 
 .services-card {
   max-width: 100%;
   border-color: rgba(29, 233, 250, 0.2);
+  
+  /* ADICIONE ESTAS LINHAS ABAIXO */
+  min-height: 180px;         /* Mantém um padrão visual entre todos os serviços */
+  display: flex;             /* Ativa o Flexbox dentro do card */
+  flex-direction: column;    /* Alinha o título e o parágrafo em coluna */
+  justify-content: center;   /* Centraliza o texto verticalmente dentro do card azul */
+  padding: 20px;             /* Aumenta o respiro interno do texto */
 }
 
 .services-card h3 {
@@ -421,4 +430,5 @@ body {
   .card p {
     font-size: 10px;
   }
+
 }
