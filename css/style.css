@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
 * {
   margin: 0;
@@ -10,10 +10,10 @@ body {
   background: #0a0f14;
   font-family: 'Montserrat', sans-serif;
   color: #e9fef9;
+  overflow-x: hidden; /* Evita rolagem horizontal indesejada */
 }
 
-
-/* FRAME CENTRAL (IGUAL AO ORIGINAL) */
+/* ===== FRAME CENTRAL ===== */
 .frame {
   width: 92%;
   height: 88vh;
@@ -25,9 +25,10 @@ body {
   box-shadow: 0 40px 100px #1de9fa;
 
   position: relative;
+  z-index: 10; /* Fica abaixo do Overlay mas acima do void */
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 .header {
   position: absolute;
   top: 35px;
@@ -37,40 +38,46 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 50; /* Garante que o menu original fique visível */
 }
 
 .logo {
   font-size: 16px;
   letter-spacing: 3px;
   color: #1de9fa;
+  font-weight: 600;
 }
 
-/* MENU */
+/* ===== ÍCONE DE MENU (ORIGINAL) ===== */
 .menu {
   width: 20px;
   height: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
+  z-index: 100;
 }
 
 .menu span {
   height: 1px;
   background: #1de9fa;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* HERO */
+/* ===== HERO (HOME) ===== */
 .hero {
   display: flex;
   height: 100%;
 }
 
-/* LEFT */
-
-
+/* LEFT (HOME) */
 .left {
   width: 60%;
   padding: 140px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .left h1 {
@@ -86,13 +93,23 @@ body {
   margin-top: 0;
   line-height: 1.6;
   font-size: clamp(14px, 1.25vw, 18px); 
-  max-width: 550px;    /* Largura ideal para o texto fluir nas 3 linhas que você marcou com <br> */
+  max-width: 550px;
   margin-bottom: 40px;
   overflow: visible;
   display: block;
 }
 
-/* CARD */
+/* RIGHT (HOME) */
+.right {
+  width: 40%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+/* CARDS GERAIS */
 .card {
   width: 100%;
   max-width: 640px;
@@ -104,30 +121,29 @@ body {
 .card h3 {
   font-size: 12px;
   margin-bottom: 10px;
+  color: #111111;
 }
 
 .card p {
   font-size: 11px;
   color: #111111;
   line-height: 1.4;
-  word-wrap: break-word; /* Força a quebra de palavras se necessário */
+  word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
-
-
-.card span {
-  color: #231f20;
+/* POSIÇÃO DO CARD NA HOME */
+.right-card {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
 }
 
-/* POSIÇÕES */
-.left-card {
-  margin-top: -20px;
-}
-
-/* BOTÃO */
+/* BOTÕES GERAIS */
+/* BOTÕES GERAIS */
 .btn {
-  margin-top: 0;       /* Removi o margin-top: 30px que estava sobrando lá embaixo */
+  margin-top: 0;
   padding: 12px 30px;
   font-size: 11px;
   font-weight: 600;
@@ -135,84 +151,236 @@ body {
   background: #1de9fa;
   color: #231f20;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+  /* ADICIONE ESTAS LINHAS ABAIXO */
+  width: auto;               /* Impede que o botão estique no mobile */
+  align-self: flex-start;    /* Alinha o botão à esquerda dentro do contêiner Flex */
+  max-width: 250px;          /* Define uma largura máxima para o botão não ficar muito grande */
 }
 
-/* RIGHT */
-
-.right {
-  width: 42%;
-  position: relative;
-  display: flex;           /* Ativa o modo flex */
-  align-items: flex-end;   /* Alinha o card na parte de baixo */
-  justify-content: center; /* Centraliza o card horizontalmente dentro da área cinza */
-  padding-bottom: 80px;    /* Define a distância do fundo */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(29, 233, 250, 0.4);
 }
 
 
-/* CARD DIREITO */
 
-.right-card {
-  position: relative;      /* Mudamos de absolute para relative */
-  width: 90%;              /* Ocupa quase toda a largura da metade direita */
-  max-width: 500px;        /* Mas não passa de 500px para não ficar gigante */
-  padding: 20px;
+
+/* ===== ESTILOS DA PÁGINA DE SERVIÇOS ===== */
+
+/* Garante o fundo duplo na página de serviços */
+.services-page .frame {
+  background: linear-gradient(90deg, #0b1117 50%, #1f2a35 50%);
+}
+
+.services-hero {
+  display: flex;
+  height: calc(100% - 100px); /* Desconta o header */
+  padding-top: 100px;
+}
+
+.left-services {
+  width: 45%;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-title {
+  font-size: clamp(28px, 3.5vw, 48px);
+  color: #1de9fa;
+  max-width: 500px;
+  line-height: 1.2;
+}
+
+.right-services {
+  width: 55%;
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas */
+  gap: 30px;
+  align-items: center;
+}
+
+.services-card {
+  max-width: 100%;
+  border-color: rgba(29, 233, 250, 0.2);
+}
+
+.services-card h3 {
+  font-size: 14px;
+}
+
+.services-card p {
+  color: rgba(17, 17, 17, 0.9);
+  line-height: 1.5;
+}
+
+/* CTA Alinhado na Esquerda (igual ao layout da home) */
+.services-cta {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+}
+
+/* ===== ESTILOS DO MENU OVERLAY (LIMPO E INTUITIVO) ===== */
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 15, 20, 0.98); /* Fundo quase preto, transparente */
+  z-index: 1000; /* Garante que fique acima de TUDO */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Escondido por padrão */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Estado Ativo do Menu Overlay */
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Botão Fechar do Menu (X) */
+.menu-close {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.menu-close span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
   background: #1de9fa;
-  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 2px;
 }
 
-
-
-.right-card h3 {
-  color: #111111;
+.menu-close span:first-child {
+  transform: translateY(-50%) rotate(45deg);
 }
 
-.menu {
-  display: none;
+.menu-close span:last-child {
+  transform: translateY(-50%) rotate(-45deg);
 }
 
-/* ===== RESPONSIVO ===== */
+/* Links do Menu */
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
 
-/* ===== RESPONSIVO LIMPO ===== */
+.menu-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 600;
+  text-decoration: none;
+  color: #e9fef9;
+  letter-spacing: 2px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
 
-/* NOTEBOOK */
+.menu-link:hover {
+  color: #1de9fa;
+  transform: translateX(10px);
+}
 
+/* Link Ativo */
+.menu-link.active-link {
+  color: #1de9fa;
+  border-bottom: 2px solid #1de9fa;
+  padding-bottom: 5px;
+}
 
+/* ===== RESPONSIVIDADE MOBILE (FIM DO CSS) ===== */
 
-/* TABLET */
+/* TABLET (Telas menores que 900px) */
 @media (max-width: 900px) {
-
-  .hero {
+  
+  .hero, .services-hero {
     flex-direction: column;
+    height: auto;
   }
 
-  .left, .right {
+  .left, .right, .left-services, .right-services {
     width: 100%;
+    padding: 80px 40px;
   }
 
+  /* HOME MOBILE */
   .left {
-    padding: 80px 40px;
+    padding-top: 140px; /* Mais espaço para o header */
+    text-align: center;
+    align-items: center;
+  }
+
+  .texto-hero {
+    max-width: 100%;
   }
 
   .right {
     height: auto;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
+    align-items: center;
   }
 
-  .right-card {
+  /* SERVIÇOS MOBILE */
+  .services-hero {
+    padding-top: 140px;
+  }
+
+  .left-services {
+    padding: 60px 40px 20px 40px;
+    text-align: center;
+  }
+
+  .right-services {
+    grid-template-columns: 1fr; /* Uma coluna só */
+    padding: 20px 40px 80px 40px;
+    gap: 20px;
+  }
+
+  .services-cta {
     position: relative;
     bottom: auto;
-    right: auto;
-    margin: 30px auto;
-    max-width: 90%;
+    left: auto;
+    margin: 40px auto;
+    display: block;
+    width: 90%;
+    max-width: 300px;
   }
 
+  /* AJUSTE NO FRAME */
   .frame {
     height: auto;
+    margin: 3vh auto;
+    /* Remove o fundo duplo no mobile, usa só o escuro */
+    background: #0b1117; 
+  }
+
+  .services-page .frame {
+    background: #0b1117;
   }
 }
 
-
+/* CELULAR PEQUENO (Telas menores que 600px) */
 @media (max-width: 600px) {
 
   .header {
@@ -221,30 +389,36 @@ body {
     top: 25px;
   }
 
+  .menu-close {
+    right: 30px;
+    top: 30px;
+  }
+
+  .left, .right-services {
+    padding: 60px 30px;
+  }
+
   .left {
-    padding: 80px 30px;
+    padding-top: 120px;
   }
 
   .left h1 {
-    font-size: 38px;
+    font-size: 32px;
   }
 
-  .left p {
-    font-size: 13px;
-  }
-
-  .btn {
-    font-size: 10px;
-    padding: 8px 20px;
+  .services-title {
+    font-size: 26px;
   }
 
   .card {
-    width: 100%;
+    padding: 15px;
   }
 
-  .right-card {
-    position: relative;
-    width: 90%;
-    margin: 40px auto;
+  .card h3 {
+    font-size: 11px;
+  }
+
+  .card p {
+    font-size: 10px;
   }
 }
