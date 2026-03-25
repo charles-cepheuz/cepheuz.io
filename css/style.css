@@ -77,24 +77,20 @@ body {
   font-size: clamp(32px, 4.2vw, 58px);
   font-weight: 600;
   line-height: 1.1;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   max-width: 530px;
   letter-spacing: -1px;
 }
 
 .texto-hero {
-  margin-top: -35px;
-
-  line-height: 1.4;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 3;   /* força 3 linhas */
-  -webkit-box-orient: vertical;
-
-  overflow: hidden;
-
-  font-size: clamp(14px, 1.5vw, 20px); /* ajusta automático */
-  max-width: 650px;
+  margin-top: 0;                       /* Resolve a sobreposição com o H1 */
+  line-height: 1.6;
+  font-size: clamp(14px, 1.25vw, 18px); 
+  max-width: 480px;                    /* Evita que o texto encoste na divisória central */
+  margin-bottom: 40px;                 /* Dá um respiro elegante antes do botão */
+  overflow: visible;
+  display: block;                      /* Garante que o texto flua naturalmente */
+  -webkit-line-clamp: unset;           /* Remove qualquer trava de linhas anterior */
 }
 
 /* CARD */
