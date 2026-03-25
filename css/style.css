@@ -74,10 +74,12 @@ body {
 }
 
 .left h1 {
-  font-size: 58px;
+  font-size: clamp(32px, 4.2vw, 58px);
   font-weight: 600;
   line-height: 1.1;
-  margin-bottom: 60px;
+  margin-bottom: 25px;
+  max-width: 530px;
+  letter-spacing: -1px;
 }
 
 .texto-hero {
